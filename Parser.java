@@ -58,6 +58,8 @@ public class Parser {
 	
 	public static void main(String args[]) {
 		try {
+			if (args.length != 1)
+				throw new RuntimeException("Number of args must be 1");
 			String address = args[0];
 			InputStreamReader isr = new InputStreamReader(new FileInputStream(address), "UTF-8");
 			int n;
